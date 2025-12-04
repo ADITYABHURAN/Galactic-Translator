@@ -194,53 +194,6 @@ Edit `frontend/src/App.css` to customize the theme:
 ### Adjust Animations
 Control animation speeds in `App.css`:
 
-```css
-/* Starfield speed */
-animation: move-stars 200s linear infinite;
-
-/* Border glow timing */
-animation: border-glow 3s ease-in-out infinite;
-```
-
-### Disable Intro Animation
-In `frontend/src/App.jsx`, change the intro timer:
-
-```javascript
-// Set to 0 to skip intro
-const timer = setTimeout(() => setShowIntro(false), 0)
-```
-
-## 🐛 Troubleshooting
-
-### Common Issues
-
-**CORS Errors**
-- Ensure backend server is running on port 3001
-- Check that CORS is enabled in `backend/server.js`
-
-**Font Not Loading**
-- Verify internet connection (Aurebesh font loads from CDN)
-- Check browser console for font loading errors
-- Alternative: Download font and serve locally
-
-**Port Already in Use**
-- **Backend**: Change PORT in `backend/server.js`
-- **Frontend**: Change port in `frontend/vite.config.js`
-- Kill existing processes:
-  ```powershell
-  # Find process using port
-  netstat -ano | findstr :3001
-  # Kill process (replace PID)
-  taskkill /PID <PID> /F
-  ```
-
-**Animations Not Smooth**
-- Check browser hardware acceleration settings
-- Reduce animation complexity in `App.css`
-
-**Intro Animation Stuck**
-- Refresh the page (Ctrl+R)
-- Check browser console for JavaScript errors
 
 ## 🚀 Future Enhancements
 
